@@ -1,5 +1,7 @@
 # AlphiGo
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24085385.svg)](https://doi.org/10.5281/zenodo.24085385)
+
 AlphaZero and Gumbel AlphaZero for the game of Go, trained on a single consumer GPU.
 
 This repository contains the code behind the master's thesis of Filip Grujić and the accompanying paper: the Go engine, supervised learning on human games, PUCT and Gumbel AlphaZero search, the self-play training loops, and the evaluation scripts.
@@ -75,6 +77,10 @@ No game records are included.
 - Human 9×9 games from OGS (supervised baseline and the fixed evaluation set of 10,000 positions): the OGS archive 2013–2021, https://archive.org/details/ogs2021. `scripts/encode_ogs_supervised.py` keeps 9×9 games in which both players are ranked 5 kyu or stronger (OGS rank ≥ 25), without games lost on time and with at least 20 moves.
 
 The Gumbel self-play experiments do not train on human games.
+
+## Citation
+
+To cite the version of the code used in the paper, use DOI [10.5281/zenodo.24085386](https://doi.org/10.5281/zenodo.24085386) (v1.0). DOI [10.5281/zenodo.24085385](https://doi.org/10.5281/zenodo.24085385) always resolves to the latest version.
 
 ## License
 
