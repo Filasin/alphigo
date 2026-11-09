@@ -1,0 +1,18 @@
+# Core (enough for the tests and the sign experiment, CPU only)
+tensorflow>=2.15
+numpy
+h5py
+sgfmill>=1.1.1
+py7zr>=0.20.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+pygame-ce>=2.4.0
+pytest
+
+# GPU self-play (Linux or WSL2 with an NVIDIA GPU). Install as needed:
+# tensorflow[and-cuda]
+# onnxruntime-gpu
+# tf2onnx
+# tensorrt==10.16.1.11       # version used in the experiments
+# Cython                     # optional, for setup_cfast.py
+# nvidia-cudnn-cu12==9.3.0.75; sys_platform == "linux"   # cuDNN 9.20+ broke Pascal (sm_61) convolutions

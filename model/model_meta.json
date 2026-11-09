@@ -1,0 +1,11 @@
+{
+  "onnx_file": "round_019_agent.onnx",
+  "keras_file": "round_019_agent.h5",
+  "encoder": "alphazero_komi",
+  "board_size": 9,
+  "komi": 7.5,
+  "gumbel_m": 16,
+  "num_blocks": 8,
+  "filters": 64,
+  "description": "Gumbel AlphaZero, 9x9, 19 self-play rounds, 17/20 vs GnuGo level 1"
+}

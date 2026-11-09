@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv*/
+.pytest_cache/
+
+# Data, checkpoints, logs and run directories (not distributed)
+data/
+data_9x9/
+checkpoints/
+runs/
+logs/
+figures/
+generated_games/mcst_9x9/
+*.npy
+*.7z
+*.zip
+*.h5
+!model/*.h5
+
+# Compiled extension and native build artifacts
+*.so
+*.pyd
+*.obj
+*.exe
+build/
+alphigo/mcts/_cboard.c
+
+# External GTP engines (download separately, see gtp_agents/SETUP.md)
+gtp_agents/*
+!gtp_agents/SETUP.md

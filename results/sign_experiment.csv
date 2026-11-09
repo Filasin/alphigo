@@ -1,0 +1,11 @@
+variant,sims,wins,games
+correct,1,20,40
+correct,8,29,40
+correct,32,32,40
+correct,100,36,40
+correct,400,39,40
+inverted,1,20,40
+inverted,8,4,40
+inverted,32,2,40
+inverted,100,0,40
+inverted,400,0,40

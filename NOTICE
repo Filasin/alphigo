@@ -1,0 +1,47 @@
+Third-party code
+================
+
+Parts of the `alphigo` package started from the companion code of the book
+
+    Max Pumperla and Kevin Ferguson, Deep Learning and the Game of Go,
+    Manning, 2019.
+    https://github.com/maxpumperla/deep_learning_and_the_game_of_go
+    (Python package `dlgo`)
+
+The `dlgo` repository does not contain a license file. Its packaging metadata,
+`code/setup.py`, declares `license='MIT'`. The `interactive/` folder of that
+repository is licensed separately (CC BY-NC 4.0); nothing from it is used here.
+
+The following modules began as ports of `dlgo` code and were modified, in most
+cases substantially:
+
+  alphigo/alphigo_board.py, alphigo/alphigo_types.py, alphigo/zobrist.py
+      board representation and game rules (dlgo/goboard_fast.py, gotypes.py,
+      zobrist.py)
+  alphigo/agent/naive.py, helpers.py, deep_learning.py, policy_agent.py,
+  q_agent.py, ac_agent.py
+      agents (dlgo/agent, dlgo/rl)
+  alphigo/agent/zero_agent.py
+      the original AlphaZero agent (dlgo/zero/agent.py)
+  alphigo/mcts/monte_carlo.py
+      Monte Carlo tree search (dlgo/mcts/mcts.py)
+  alphigo/encoders/oneplane.py, sevenplane.py, elevenplane.py
+      board encoders (dlgo/encoders)
+  alphigo/data/processor.py, sampling.py, generator.py
+      SGF data pipeline (dlgo/data)
+  alphigo/rl/experience.py, alphigo/rl/simulate.py
+      experience buffers and parallel self-play (dlgo/rl, book chapter 14)
+  alphigo/kerasutil.py, alphigo/utils.py
+      helpers (dlgo/kerasutil.py, dlgo/utils.py)
+
+In addition, several network definitions in alphigo/data/networks.py follow
+the architectures described in the book (dlgo/networks).
+
+The Gumbel AlphaZero search (alphigo/agent/gumbel_zero_agent.py,
+gumbel_math.py, fast_gumbel_agent.py, alphigo/mcts/_cboard.pyx) and the
+self-play, training and evaluation scripts are not derived from `dlgo`. The
+Gumbel search follows Danihelka et al., "Policy improvement by planning with
+Gumbel", ICLR 2022.
+
+SGF files are parsed with sgfmill (https://github.com/mattheww/sgfmill), which
+is installed as a dependency and not included here.

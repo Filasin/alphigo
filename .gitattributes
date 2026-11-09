@@ -1,0 +1,16 @@
+# Shell scripts must keep LF endings: this repository is edited on Windows
+# where core.autocrlf rewrites text files on checkout, and a CRLF script
+# fails on Linux with "$'\r': command not found".
+*.sh text eol=lf
+
+# Same for the demo launcher's Windows counterpart, which needs CRLF.
+*.bat text eol=crlf
+
+# Binaries git should never touch.
+*.pptx binary
+*.docx binary
+*.pdf   binary
+*.h5    binary
+*.onnx  binary
+*.npy   binary
+*.whl   binary
